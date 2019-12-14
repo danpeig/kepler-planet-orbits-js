@@ -1,0 +1,15 @@
+<HTML>
+<head>
+    <meta charset="utf-8">
+</head>
+Check your browser Javascript Console
+<script src="planetPosition.js"></script>
+<script>
+    let now = new Date().getTime();
+    console.log("Millitime (now:"+now);
+    console.log("Ecliptic Coordinates for Mars (x,y,z):");
+    console.log(computeEclipticCoordinates(keplerianElements2050, 4, now));
+    console.log("ICRF/J2000 Coordinates for Mars (x,y,z):");
+    console.log(convertToICRF(computeEclipticCoordinates(keplerianElements2050, 4, now)));
+</script>
+</HTML>
